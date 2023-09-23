@@ -2,11 +2,13 @@ const { ethers, waffle } = require("hardhat");
 const { expect } = require("chai");
 
 describe("Faucet contract", function () {
-  let Faucet, faucet, owner, addr1, addr2;
+  let faucet;
+  let owner, addr1, addr2;
 
   beforeEach(async function () {
-    Faucet = await ethers.getContractFactory("Faucet");
     [owner, addr1, addr2] = await ethers.getSigners();
+    
+    const Faucet = await ethers.getContractFactory("Faucet");
 
     // Deploy the Faucet contract
     faucet = await Faucet.deploy();
