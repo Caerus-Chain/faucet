@@ -14,13 +14,19 @@ contract Faucet is Ownable {
 
     // Function to get test ether
     function getTestEther() public {
-        require(address(this).balance >= 0.5 ether, "Insufficient balance in faucet");
+        require(
+            address(this).balance >= 0.5 ether,
+            "Faucet::getTestEther: Insufficient balance in faucet"
+        );
         payable(msg.sender).transfer(0.5 ether);
     }
 
     // Function for the contract owner to withdraw ether
     function withdraw(uint256 amount) public onlyOwner {
-        require(address(this).balance >= amount, "Insufficient balance");
+        require(
+            address(this).balance >= amount,
+            "Faucet::withdraw: Insufficient balance"
+        );
         payable(owner()).transfer(amount);
     }
 }
