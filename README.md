@@ -57,5 +57,17 @@ Run the following command to compile the contracts using the Solidity compiler a
 npx hardhat run scripts/deploy.js --network caerus
 ```
 
+### 3. Funding the Faucet
+After deploying, you'll likely want to fund the `Faucet` contract. Run the following command to send Ether to the contract.
+```
+npx hardhat run scripts/fundFaucet.js --network caerus
+```
+
+### 4. Requesting Test Ether
+To request test Ether from the `Faucet` contract, execute the following command. This will call the `getTestEther` method and transfer `0.5 Ether` to the caller's account.
+```
+npx hardhat run scripts/getTestEther.js --network caerus
+```
+
 ## Conclusion
 If you would like to contribute to the project, please fork the repository, make your changes, and then submit a pull request. We appreciate all contributions and feedback!
