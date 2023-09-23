@@ -1,9 +1,9 @@
 # Faucet Smart Contract
-This repository contains a Caerus smart contract that acts as a faucet, allowing users to request 0.5 Ether for testing purposes. The contract uses Solidity and can be deployed using Hardhat.
+This repository contains a Caerus smart contract that acts as a faucet, allowing users to request `0.5 Ether` for testing purposes. The contract uses Solidity and can be deployed using Hardhat.
 
 ### Methods:
 1. **getTestEther()**
-- Allows users to request 0.5 Ether from the contract for testing purposes.
+- Allows users to request `0.5 Ether` from the contract for testing purposes.
 - No restrictions like cooldowns or user-specific limitations.
 - Requires that the contract has sufficient funds to fulfill the request.
 
